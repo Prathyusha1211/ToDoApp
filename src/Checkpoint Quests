@@ -80,3 +80,30 @@ something in the code playground? [Hint : Take a look at the link shared with th
 e)The dev-tools of the browser can also be used to inspect the elements of a page.
 Can you inspect HTML elements of your page?
         -Yes, we can inspect the HTML elements of our page
+
+
+
+Game Checkpoint 4 : Making a component react to changes
+
+Playground: https://codesandbox.io/s/reactingtochange-2-2btysr
+
+Checkpoint Quests:
+a)Click on both the buttons in the output and figure out how they are behaving.
+        -Clicking on Regular Button doesn't affecting the screen. When we click Mentos button it is displaying the
+        (content of regular click )*( number of times button clicked ) and then mentos click content
+
+b)Why is clicking on Regular Button not reflecting the change in the output?
+        -Because it doesn't setCountList to set the values after click
+
+
+c)Why is clicking Mentos Button reflecting the change?
+
+
+d)In App.js, what is the useState() function returning? A list, or object, or function?
+        --list
+
+e)What input is given to the useState() function?\
+        --initial value
+
+f)Where is this useState() function defined? Was it created by us?
+        --It is not created by us, it is built in React Hook from React library.

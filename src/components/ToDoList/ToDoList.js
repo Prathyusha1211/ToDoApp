@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import ToDoItems from "../ToDoItems/ToDoItems";
 import './ToDoList.css'
+import EmptyButton from "../EmptyButton/EmptyButton";
 
 export default function ToDoList(){
     const [todos,setTodos] = useState([
@@ -19,9 +20,17 @@ export default function ToDoList(){
 
         })
     }
+
+    const emptyTodo=()=>{
+        setTodos([]);
+    }
+
     return(
         <>
-            <ul type="i">{getToDoItems()}</ul>
+            {
+                todos.length > 0 ? <ul type="i">{getToDoItems()}</ul> : <i><h4>Nothing to do buddy. Sleep!!</h4></i>
+            }
+            <EmptyButton onEmptyButtonClick={emptyTodo}/>
         </>
 
         //<h4>Nothing to do buddy. Sleep!!</h4>
