@@ -1,0 +1,25 @@
+Game Checkpoint 1 : Project Structure
+
+Playground : https://codesandbox.io/s/tw-react-1-4glqyu?file=/src/App.js
+
+Checkpoint Quests:
+a)Find out where the HTML file is located.
+       -HTML file is located in the public folder.
+
+b)What does the code inside index.js file do?
+        -Code in index.js prepares the web page for a React application,
+        creates a special root instance using modern React features, and then renders
+        the main <App /> component onto the web page.
+
+c)What is this <App /> inside the index.js  file?
+        -It is a react component that is rendered into index.js.
+        Generally it is known as root component in react application. It provides structure to the application
+        Other components can be rendered into this App component.
+
+d)Is the App() function returning an HTML tag?
+        -No, App() function is returning JSX
+
+e)How is the  App() function invoked/called/executed?
+        -In a React application, the App() function is invoked automatically by React
+         when you use ReactDOM.render(<App />,
+         document.getElementById('root')) to render the <App /> component into the DOM.
