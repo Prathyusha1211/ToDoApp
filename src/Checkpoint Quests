@@ -23,3 +23,60 @@ e)How is the  App() function invoked/called/executed?
         -In a React application, the App() function is invoked automatically by React
          when you use ReactDOM.render(<App />,
          document.getElementById('root')) to render the <App /> component into the DOM.
+
+
+ Game Checkpoint 2 : Creating a simple component
+
+ Playground :	https://codesandbox.io/s/tw-react-2-1nmu00?file=/src/App.js
+
+ Checkpoint Quests:
+ a)How is the <Header/> component created and used inside App()? Can you create and put a <SubHeader/>
+ which is of a slightly smaller font than the header, right below the <Header/>?
+        -Header component is created using JSX, it is imported and rendered into App component.
+        Yes, we can create and put a SubHeader component and it bellow Header
+
+ b)In App.js why is the <Count/> component able to receive data as an attribute and the <Header/> component can’t?
+        -Count component has passed props and the data is received  as an attribute
+        Header component doesn't passed any props.
+
+ c)Why does the Count() function’s definition have {} in parameters?
+        -{} in the parameters of the Count() function represent object destructuring in JavaScript.
+        It allows the function to extract specific properties from an object passed as an argument.
+
+ d)Should the components always be used with a self-closing tag?
+        -No, Component can be used without a self-closing tag when there are child components to wrap within them.
+
+ e)What happens if a component which is expecting a parameter is not passed a value?
+   What happens if extra unanticipated values are passed instead?
+           -If a component expecting a parameter isn't passed a value,
+           the parameter inside the component will be undefined.
+           Extra unanticipated values passed to a component are ignored by React.
+
+
+Game Checkpoint 3 : Loops and Conditionals in components
+
+Playground : https://codesandbox.io/s/renderinglist-89djrc?file=/src/App.js
+
+Checkpoint Quests:
+a)Take a look at App() function definition. How are we able to execute a JS code
+inside <div> tags (i.e. calling the map method on the countList)? Is there any JS code
+inside <div> tags in the Count() function as well?
+        -Using JSX syntax we can execute JS code inside <div> tags. Yes, in Count() also JS code is used.
+
+b)In App.js, this line: <Count label="" data="" /> shows we can pass attributes to the tags.
+Do you think label and data are reserved keywords, or are they just random variable names?
+        -They are just random variables
+
+c)Why is the <Count label="" data="" /> in App.js working fine with and without label attribute?
+How is it getting a default label value when nothing is passed?
+        -Generally it ignores if any attribute value is not passed. But we need to handle it using default values
+        Otherwise we may end it unexpected behaviour in execution.
+
+d)Copy the URL from the output window (of sandbox) and open it in your browser (chrome preferably).
+Open dev-tools (F12) and look for any warning in the console. Can you fix the warning by changing
+something in the code playground? [Hint : Take a look at the link shared with the warning in the browser console]
+        -Provide key to remove that warning
+
+e)The dev-tools of the browser can also be used to inspect the elements of a page.
+Can you inspect HTML elements of your page?
+        -Yes, we can inspect the HTML elements of our page

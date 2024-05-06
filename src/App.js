@@ -1,10 +1,15 @@
 import './style.css';
+import Header from "./components/Header/Header";
+import ToDoList from "./components/ToDoList/ToDoList";
 function App() {
   return (
-      <div className="Application">
-        <h1>Aye Captain! 🫡</h1>
-        <h2>Lets create something!</h2>
-      </div>
+      <>
+          <div className="Application">
+              <Header/>
+              <ToDoList/>
+          </div>
+      </>
+
   );
 }
 
