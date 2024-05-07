@@ -1,8 +1,8 @@
 import React from "react";
 import ToDoList from "../ToDoList/ToDoList";
-export default function EmptyButton({onEmptyButtonClick}){
+export default function EmptyButton({onEmptyButtonClick,title}){
 
     return(
-        <button onClick={onEmptyButtonClick}>Empty</button>
+        <button onClick={onEmptyButtonClick}>{title}</button>
     );
 }

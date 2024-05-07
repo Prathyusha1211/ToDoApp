@@ -107,3 +107,23 @@ e)What input is given to the useState() function?\
 
 f)Where is this useState() function defined? Was it created by us?
         --It is not created by us, it is built in React Hook from React library.
+
+
+Game Checkpoint 5 : Passing functions to a component
+
+Playground: https://codesandbox.io/s/passingfunctionstocomponents-kklqlx?file=/src/App.js
+
+Checkpoint Quests:
+a)What attributes are being passed to <Count/> in App.js?
+Is every attribute passed to <Count/> some kind of data?
+        --key, initial value, id, on increment click are passed to <Count/> in App.js
+         And every attribute is passing some kind of data.
+
+b)In which file is the handleIncrementClick function getting defined and where is it getting called/invoked?
+        --handleIncrementClick function is defined in the App.js file itself and
+        it is getting called or invoked in Button in Count.js
+
+c)How is the button inside the Count() component able to change the countList declared
+inside the App() component without having direct access to setCountList?
+        --When increment button is accessed with the props passed to it, then Count() rerender to the App().
+

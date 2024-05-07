@@ -1,7 +1,17 @@
 li{
-    background-color: white;
+    background-color: darkseagreen;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid black;
 }
 .items{
     text-align: center;
     justify-content: center;
+}
+.completed{
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+    background-color: indianred;
 }

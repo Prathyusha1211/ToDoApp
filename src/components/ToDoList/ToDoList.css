@@ -2,6 +2,18 @@ ul{
     list-style-type: none;
     padding: 0;
 }
-h4{
+.empty-note{
     color: red;
+    font-style: italic;
+}
+.completed{
+    text-decoration: line-through;
+}
+.to-do{
+    border: 2px solid black;
+    height: 500px;
+    width: 500px;
+    margin:100px;
+    padding: 20px;
+
 }
