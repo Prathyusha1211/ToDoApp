@@ -1,0 +1,6 @@
+.empty-button{
+    backface-visibility: hidden;
+    background-color: lightblue;
+    border-radius: 4px;
+
+}
