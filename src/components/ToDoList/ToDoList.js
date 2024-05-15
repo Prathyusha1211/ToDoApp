@@ -3,6 +3,7 @@ import ToDoItems from "../ToDoItems/ToDoItems";
 import './ToDoList.css'
 import EmptyButton from "../EmptyButton/EmptyButton";
 import Header from "../Header/Header";
+import AddButton from "../AddButton/AddButton";
 
 export default function ToDoList() {
     const [todos, setTodos] = useState([
@@ -12,6 +13,15 @@ export default function ToDoList() {
         {id: 3, task: "Sleep for 2 hours", completed: false},
         {id: 4, task: "Take a shower", completed: false},
     ])
+
+    const addTask = (taskName) => {
+        const newTodo = {
+            id: todos.length,
+            task: taskName,
+            completed: false
+        };
+        setTodos([...todos, newTodo]);
+    };
 
     const [someTodosRemoved, setSomeTodosRemoved] = useState(false)
 
@@ -59,11 +69,13 @@ export default function ToDoList() {
         <>
             <div className="to-do">
                 <Header/>
+                <AddButton addTask={addTask}/>
                 {
                     todos.length > 0 ?
                         <ul type="i">{getToDoItems()}</ul> :
                         <h4 className="empty-note">Nothing to do buddy. Sleep!!</h4>
                 }
+                
                 <EmptyButton onEmptyButtonClick={someTodosRemoved ? removeCompletedTasks : emptyTodo}
                              title={someTodosRemoved ? "Remove Completed Tasks" : "Empty Todo"}/>
             </div>
